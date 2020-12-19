@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Lato', sans-serif;
+}
+
+:root {
+  --black: #393b44;
+  --white: #f1f3f8;
+}
+
+body {
+  background-color: var(--white);
+  width: 100vw;
+  overflow-x: hidden;
+}
+
+#header {
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  background-color: var(--black);
+  position: fixed;
+  overflow: hidden;
+  z-index: 2;
+}
+
+.fadeOutClass {
+  animation-name: fadeOut;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fadeOut;
+  -webkit-animation-duration: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; height: 100vh; }
+  to { opacity: 0; height: 0; }
+}
+
+@-webkit-animation fadeOut {
+  from { opacity: 1; height: 100vh; }
+  to { opacity: 0; height: 0; }
+}
+
+.header-text {
+  width: 80%;
+  margin: 0 auto;
+  position: relative;
+  top: 20%;
+  line-height: 40px;
+  color: var(--white);
+}
+
+#header span {
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  height: 54px;
+  width: 54px;
+  margin-left: -27px;
+  border: 2px solid var(--white);
+  border-radius: 50%;
+}
+
+#header span::after {
+  content: '';
+  border-left: 2px solid var(--white);
+  border-bottom: 2px solid var(--white);
+  height: 24px;
+  width: 24px;
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  position: absolute;
+  top: 50%;
+  margin: -16px 0 0 -12px;
+}
+
+#gallery {
+  width: 100vw;
+  background-color: var(--white);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  opacity: 0;
+}
+
+.fadeInClass {
+  animation-name: fadeIn;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  -webkit-animation-name: fadeIn;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-delay: 2s;
+  -webkit-animation-fill-mode: forwards;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+@-webkit-animation fadeIn {
+  from { opacity: 0 }
+  to { opacity: 1 }
+}
+
+.column img {
+  width: 100%;
+}
+
+/* two columns */
+@media only screen and (min-width: 500px) {
+  #header {
+    height: 20vh;
+    opacity: 0.8;
+  }
+
+  #scrollButton {
+    display: none;
+  }
+
+  #gallery {
+    opacity: 1;
+    position: relative;
+    top: 20vh;
+  }
+
+  .column {
+    flex: 50%;
+  }
+
+  .column img {
+    padding: 4px 6px;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .column {
+    flex: 25%;
+  }
+
+  .column img {
+    padding: 4px 6px;
+  }
+}

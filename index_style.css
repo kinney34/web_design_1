@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  font-family: helvetica;
+}
+
+h1 {
+  padding: 100px;
+}
+
+ul {
+  list-style-type: circle;
+}
+
+li {
+  line-height: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}

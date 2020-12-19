@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1.0, minimum-scale=1.0'>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel='stylesheet' type='text/css' href='style.css'>
+  <title>Restaurant</title>
+</head>
+<body>
+
+  <div class='mobile-header'>
+    <div class='hamburger-container'>
+      <div class='bar1'></div>
+      <div class='bar2'></div>
+      <div class='bar3'></div>
+    </div>
+  </div>
+
+  <div class='desktop-header'>
+    <div class='desktop-nav-wrapper'>
+      <a href='#text-block'>ABOUT</a>
+      <a href='#menu'>MENU</a>
+      <a href='#picture-div'>GALLERY</a>
+      <a href='#'>CONTACT</a>
+    </div>
+  </div>
+
+  <div class='nav-screen'>
+    <div class='hamburger-container'>
+      <div class='bar1'></div>
+      <div class='bar2'></div>
+      <div class='bar3'></div>
+    </div>
+    <a href='#text-block'>About</a>
+    <a href='#menu'>Menu</a>
+    <a href='#picture-div'>Gallery</a>
+  </div>
+
+  <div class='parallax'>
+    <div class='parallax-group'>
+    <div class='parallax-layer background'>
+      <div class='filter intro-filter'></div>
+    </div>
+    <div class='parallax-layer foreground'>
+      <div class='intro'>
+        <h1>LOU'S PIZZERIA</h1>
+        <button>Order Now</button>
+      </div>
+    </div>
+    </div>
+
+  <div id='gallery-group' class='parallax-group'>
+    <div class='gallery'>
+      <div class='grid-block-one'>
+        <div class='picture-background'>
+          <div class='filter gallery-filter'></div>
+        </div>
+        <div id='text-block'>
+          <h1>Authentic Italian Cuisine and Bear Sanctuary</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. Eget mauris pharetra
+            et ultrices neque ornare aenean euismod elementum. Nunc sed blandit libero
+            volutpat. Imperdiet dui accumsan sit amet nulla facilisi morbi tempus iaculis.
+          </p>
+        </div>
+      </div>
+      <div class='grid-pizza'></div><!--<img src='images/pizza.jpg'>-->
+      <div class='grid-bear'></div><!--<img src='images/chubby_bear.jpg'>-->
+      <div class='hours'>
+        <h1>Hours of Operation</h1>
+        <p><b>Sunday-Thursday:</b> 11am - 11pm</p><br>
+        <p><b>Friday-Saturday:</b> 11am - 1am</p><br><br>
+        <p>Note: the bears do not keep reliable hours.</p>
+      </div>
+    </div>
+  </div>
+
+  <div id='menu'>
+    <h1 class='bordered'>Our Menu</h1>
+    <form name='menu-category' action='menu_script.js' method='get'>
+      <input type='radio' name='category' id='classics' value='classics' checked><label for='classics'>Classics</label>
+      <input type='radio' name='category' id='deluxe' value='deluxe'><label for='deluxe'>Deluxe</label>
+      <input type='radio' name='category' id='sides' value='sides'><label for='sides'>Sides</label>
+      <input type='radio' name='category' id='drinks' value='drinks'><label for='drinks'>Drinks</label>
+      <input type='radio' name='category' id='desserts' value='desserts'><label for='desserts'>Dessert</label>
+    </form>
+    <div>
+      <ul id='dynamic-menu'>
+      </ul>
+    </div>
+  </div>
+
+  <div class='quote'>
+    <div class='quote-text'>
+      <h1>"Best bear and pizza place in the metro."</h1><br>
+      <h3>-Star Tribune</h3>
+    </div>
+    <img src='images/quote-photo.jpg'>
+  </div>
+
+<div class='slideshow-container'>
+  <span id='left-nav-button'></span>
+  <div class='slideshow'>
+    <div class='review-wrapper active'>
+      <p id='review-content'>Wildly irresponsible.</p>
+      <img class='user-icon' src='images/profile-user.svg'>
+      <p id='username'>USA Today</p>
+    </div>
+    <div class='review-wrapper'>
+      <p id='review-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Vivamus at augue
+      eget arcu dictum varius. Nulla aliquet porttitor lacus luctus accumsan tortor
+      posuere ac ut.</p>
+      <img class='user-icon' src='images/profile-user.svg'>
+      <p id='username'>Mike</p>
+    </div>
+    <div class='review-wrapper'>
+      <p id='review-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <img class='user-icon' src='images/profile-user.svg'>
+      <p id='username'>Sam</p>
+    </div>
+    <div class='review-wrapper'>
+      <p id='review-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Varius sit amet
+      mattis vulputate enim. Mollis aliquam ut porttitor leo a diam sollicitudin.
+      Vitae congue mauris rhoncus aenean vel elit.</p>
+      <img class='user-icon' src='images/profile-user.svg'>
+      <p id='username'>Joe</p>
+    </div>
+    <div class='review-wrapper'>
+      <p id='review-content'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <img class='user-icon' src='images/profile-user.svg'>
+      <p id='username'>Annie</p>
+    </div>
+  </div>
+  <span id='right-nav-button'></span>
+</div>
+
+  <div id='picture-div'>
+    <div class='column'>
+      <img src='images/pepperoni.jpg'>
+      <img src='images/morning-walk.jpg'>
+    </div>
+    <div class='column'>
+      <img src='images/salad.jpg'>
+      <img src='../gallery/images/mom!.jpg'>
+    </div>
+    <div class='column'>
+      <img src='images/tiramisu.jpg'>
+      <img src='images/baby-bear.jpg'>
+      <img src='images/veggie.jpg'>
+    </div>
+  </div>
+  <br><br>
+  <div>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a>
+    from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src='scripts.js'></script>
+  <script src='menu_script.js'></script>
+  <script src='slideshow_script.js'></script>
+</body>
+</html>
